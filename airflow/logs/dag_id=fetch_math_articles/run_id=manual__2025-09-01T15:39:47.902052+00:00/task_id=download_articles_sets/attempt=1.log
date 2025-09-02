@@ -1,0 +1,35 @@
+{"timestamp":"2025-09-01T15:40:05.272375","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-09-01T15:40:05.273455","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/articles.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-09-01T15:40:05.489433Z","level":"info","event":"1% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:06.734806Z","level":"info","event":"2% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:07.524269Z","level":"info","event":"3% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:08.102707Z","level":"info","event":"4% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:09.256769Z","level":"info","event":"5% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:10.394008Z","level":"info","event":"6% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:11.242846Z","level":"info","event":"7% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:12.813554Z","level":"info","event":"8% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:13.451264Z","level":"info","event":"9% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:14.810409Z","level":"info","event":"10% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:17.268702Z","level":"info","event":"11% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:18.225257Z","level":"info","event":"12% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:19.428183Z","level":"info","event":"13% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:20.822623Z","level":"info","event":"14% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:24.578386Z","level":"info","event":"15% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:25.767792Z","level":"info","event":"16% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:29.078905Z","level":"info","event":"17% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:31.034019Z","level":"info","event":"18% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:32.663912Z","level":"info","event":"19% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:33.571034Z","level":"info","event":"20% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:34.322868Z","level":"info","event":"21% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:36.063068Z","level":"info","event":"22% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:38.127449Z","level":"info","event":"23% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:38.632795Z","level":"info","event":"24% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:40.069673Z","level":"info","event":"25% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:40.329675Z","level":"info","event":"26% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:41.647836Z","level":"info","event":"27% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:42.062318Z","level":"info","event":"28% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:43.727006Z","level":"info","event":"29% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:45.521177Z","level":"info","event":"30% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:46.387396Z","level":"info","event":"31% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:47.089439Z","level":"info","event":"articles sets downloaded successfully","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:40:47.089644","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

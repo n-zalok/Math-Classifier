@@ -29,7 +29,7 @@ def get_subcats(cat):
     return subcats
     
 @dag(
-    dag_id='fetch_all_maths_categories',
+    dag_id='fetch_math_categories',
     params={'depth': Param(2, type='integer')},
     catchup=False
 )

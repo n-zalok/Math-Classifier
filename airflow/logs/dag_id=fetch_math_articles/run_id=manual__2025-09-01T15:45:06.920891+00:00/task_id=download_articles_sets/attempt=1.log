@@ -1,0 +1,39 @@
+{"timestamp":"2025-09-01T15:45:24.018439","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-09-01T15:45:24.020694","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/articles.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-09-01T15:45:24.247793Z","level":"info","event":"1% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:25.062233Z","level":"info","event":"4% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:25.549805Z","level":"info","event":"7% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:26.254953Z","level":"info","event":"10% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:28.705232Z","level":"info","event":"13% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:29.819007Z","level":"info","event":"17% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:30.515956Z","level":"info","event":"20% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:31.898367Z","level":"info","event":"23% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:32.858412Z","level":"info","event":"26% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:35.160837Z","level":"info","event":"30% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:37.047363Z","level":"info","event":"33% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:38.266289Z","level":"info","event":"36% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:39.556047Z","level":"info","event":"39% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:40.795689Z","level":"info","event":"42% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:44.102820Z","level":"info","event":"46% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:45.002043Z","level":"info","event":"49% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:46.576326Z","level":"info","event":"52% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:48.901036Z","level":"info","event":"55% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:50.401958Z","level":"info","event":"59% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:51.459706Z","level":"info","event":"62% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:52.076562Z","level":"info","event":"65% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:53.646493Z","level":"info","event":"68% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:55.263102Z","level":"info","event":"71% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:55.700113Z","level":"info","event":"75% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:58.972508Z","level":"info","event":"78% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:45:59.552216Z","level":"info","event":"81% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:46:00.635864Z","level":"info","event":"84% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:46:01.047256Z","level":"info","event":"88% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:46:02.974286Z","level":"info","event":"91% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:46:04.447147Z","level":"info","event":"94% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:46:04.467003Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2025-09-01T15:46:05.339018Z","level":"info","event":"97% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:46:05.845763Z","level":"info","event":"articles sets downloaded successfully","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-01T15:46:05.846018","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-09-01T15:46:05.867734","level":"error","event":"Top level error","logger":"task","error_detail":[{"exc_type":"AirflowRuntimeError","exc_value":"API_SERVER_ERROR: {'status_code': 409, 'message': 'Server returned error', 'detail': {'detail': {'reason': 'invalid_state', 'message': 'TI was not in the running state so it cannot be updated', 'previous_state': 'failed'}}}","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1351,"name":"main"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":999,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/comms.py","lineno":204,"name":"send"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/comms.py","lineno":264,"name":"_get_response"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/comms.py","lineno":251,"name":"_from_frame"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2025-09-01T15:46:05.883560Z","level":"warning","event":"Process exited abnormally","exit_code":1,"logger":"task"}
+{"timestamp":"2025-09-01T15:46:05.883906Z","level":"error","event":"Task killed!","logger":"task"}
