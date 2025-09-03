@@ -1,0 +1,183 @@
+{"timestamp":"2025-09-03T06:30:54.307545","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-09-03T06:30:54.308102","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/clean.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-09-03T06:30:55.098208","level":"warning","event":"The input passed in on this line looks more like a URL than HTML or XML.\n\nIf you meant to use Beautiful Soup to parse the web page found at a certain URL, then something has gone wrong. You should use an Python package like 'requests' to fetch the content behind the URL. Once you have the content as a string, you can feed that string into Beautiful Soup.\n\nHowever, if you want to parse some data that happens to look like a URL, then nothing has gone wrong: you are using Beautiful Soup correctly, and this warning is spurious and can be filtered. To make this warning go away, run this code before calling the BeautifulSoup constructor:\n\n    from bs4 import MarkupResemblesLocatorWarning\n    import warnings\n\n    warnings.filterwarnings(\"ignore\", category=MarkupResemblesLocatorWarning)\n    ","category":"MarkupResemblesLocatorWarning","filename":"/opt/airflow/dags/clean.py","lineno":90,"logger":"py.warnings"}
+{"timestamp":"2025-09-03T06:31:22.647741Z","level":"info","event":"Cleaned and Saved category: Trigonometry","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:31:29.629561Z","level":"info","event":"1% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:32:11.323168Z","level":"info","event":"2% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:32:12.966106Z","level":"info","event":"2% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:32:20.049485","level":"warning","event":"The input passed in on this line looks more like a filename than HTML or XML.\n\nIf you meant to use Beautiful Soup to parse the contents of a file on disk, then something has gone wrong. You should open the file first, using code like this:\n\n    filehandle = open(your filename)\n\nYou can then feed the open filehandle into Beautiful Soup instead of using the filename.\n\nHowever, if you want to parse some data that happens to look like a filename, then nothing has gone wrong: you are using Beautiful Soup correctly, and this warning is spurious and can be filtered. To make this warning go away, run this code before calling the BeautifulSoup constructor:\n\n    from bs4 import MarkupResemblesLocatorWarning\n    import warnings\n\n    warnings.filterwarnings(\"ignore\", category=MarkupResemblesLocatorWarning)\n    ","category":"MarkupResemblesLocatorWarning","filename":"/opt/airflow/dags/clean.py","lineno":90,"logger":"py.warnings"}
+{"timestamp":"2025-09-03T06:32:54.536014Z","level":"info","event":"3% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:33:35.827557Z","level":"info","event":"4% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:33:37.493838Z","level":"info","event":"4% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:34:39.546803Z","level":"info","event":"5% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:35:18.615056Z","level":"info","event":"6% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:35:20.141788Z","level":"info","event":"6% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:35:56.371890Z","level":"info","event":"7% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:36:47.654785Z","level":"info","event":"8% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:36:47.880449Z","level":"info","event":"8% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:38:00.633202Z","level":"info","event":"9% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:38:49.391719Z","level":"info","event":"10% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:38:50.132793Z","level":"info","event":"10% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:39:24.965260Z","level":"info","event":"11% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:39:57.206599Z","level":"info","event":"12% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:39:57.550754Z","level":"info","event":"12% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:40:28.407671Z","level":"info","event":"13% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:40:58.433332Z","level":"info","event":"14% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:41:46.795123Z","level":"info","event":"15% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:42:11.717757Z","level":"info","event":"16% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:42:11.993075Z","level":"info","event":"16% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:42:44.309949Z","level":"info","event":"17% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:43:13.001535Z","level":"info","event":"18% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:43:13.260921Z","level":"info","event":"18% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:43:42.591038Z","level":"info","event":"19% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:44:04.977255Z","level":"info","event":"20% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:44:04.995986Z","level":"info","event":"20% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:44:26.346502Z","level":"info","event":"21% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:44:52.189629Z","level":"info","event":"22% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:44:52.507084Z","level":"info","event":"22% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:45:23.788152Z","level":"info","event":"23% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:45:50.398523Z","level":"info","event":"24% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:45:53.210621Z","level":"info","event":"24% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:46:24.631517Z","level":"info","event":"25% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:47:03.428825Z","level":"info","event":"26% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:47:04.243697Z","level":"info","event":"26% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:47:12.861256Z","level":"info","event":"Cleaned and Saved category: Applied mathematics","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:47:49.882784Z","level":"info","event":"27% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:48:37.627684Z","level":"info","event":"28% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:48:44.785329Z","level":"info","event":"Cleaned and Saved category: Combinatorics","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:49:19.536781Z","level":"info","event":"29% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:49:22.752509Z","level":"info","event":"Cleaned and Saved category: Probability and statistics","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:49:44.874283Z","level":"info","event":"30% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:49:48.686205Z","level":"info","event":"30% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:50:36.665823Z","level":"info","event":"Cleaned and Saved category: Topology","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:50:38.598414Z","level":"info","event":"31% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:50:59.709885Z","level":"info","event":"Cleaned and Saved category: Algebraic topology","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:51:00.298433Z","level":"info","event":"32% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:51:00.334870Z","level":"info","event":"32% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:51:06.747994Z","level":"info","event":"Cleaned and Saved category: Fractals","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:51:28.567705Z","level":"info","event":"33% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:52:32.501607Z","level":"info","event":"Cleaned and Saved category: Linear algebra","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:52:33.828242Z","level":"info","event":"34% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:52:36.081928Z","level":"info","event":"34% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:53:25.641187Z","level":"info","event":"35% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:53:43.706801Z","level":"info","event":"Cleaned and Saved category: Calculus","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:53:53.682712Z","level":"info","event":"36% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:53:53.939772Z","level":"info","event":"36% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:54:24.178466Z","level":"info","event":"37% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:00.809587Z","level":"info","event":"38% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:00.885770Z","level":"info","event":"38% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:08.995959Z","level":"info","event":"Cleaned and Saved category: Game theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:33.127900Z","level":"info","event":"Cleaned and Saved category: Set theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:36.823669Z","level":"info","event":"39% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:53.850894Z","level":"info","event":"Cleaned and Saved category: Linear programming","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:57.276324Z","level":"info","event":"40% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:59.299278Z","level":"info","event":"Cleaned and Saved category: Chaos theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:55:59.299634Z","level":"info","event":"40% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:56:14.101426Z","level":"info","event":"Cleaned and Saved category: Order theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:56:30.503693Z","level":"info","event":"41% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:57:06.084387Z","level":"info","event":"42% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:57:06.971118Z","level":"info","event":"42% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:57:18.385589Z","level":"info","event":"Cleaned and Saved category: Algebraic geometry","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:57:33.804473Z","level":"info","event":"43% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:58:13.517612Z","level":"info","event":"44% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:58:14.544601Z","level":"info","event":"44% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:58:26.601190Z","level":"info","event":"Cleaned and Saved category: Numerical analysis","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:58:26.606556Z","level":"info","event":"Cleaned and Saved category: Optimization","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:58:50.336274Z","level":"info","event":"45% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:59:16.360416Z","level":"info","event":"46% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:59:16.379515Z","level":"info","event":"46% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:59:40.108517Z","level":"info","event":"47% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:59:53.778505Z","level":"info","event":"48% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T06:59:55.437677Z","level":"info","event":"48% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:00:16.931459Z","level":"info","event":"49% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:00:40.569262Z","level":"info","event":"50% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:00:41.002175Z","level":"info","event":"50% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:01:13.164738Z","level":"info","event":"Cleaned and Saved category: Statistics","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:01:13.177045Z","level":"info","event":"51% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:01:44.441338Z","level":"info","event":"52% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:01:45.551259Z","level":"info","event":"52% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:02:22.860202Z","level":"info","event":"53% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:03:05.593117Z","level":"info","event":"54% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:03:08.347180Z","level":"info","event":"54% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:03:48.023568Z","level":"info","event":"55% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:04:26.761168Z","level":"info","event":"56% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:05:01.669251Z","level":"info","event":"57% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:05:52.759887Z","level":"info","event":"58% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:06:28.052383Z","level":"info","event":"59% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:06:45.288212Z","level":"info","event":"Cleaned and Saved category: Geometry","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:07:31.106234Z","level":"info","event":"60% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:07:33.555935Z","level":"info","event":"60% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:08:28.677489Z","level":"info","event":"61% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:09:24.892942Z","level":"info","event":"62% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:09:26.448088Z","level":"info","event":"62% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:10:41.037000Z","level":"info","event":"63% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:11:26.542502Z","level":"info","event":"64% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:11:27.021836Z","level":"info","event":"64% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:12:32.962795Z","level":"info","event":"65% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:13:46.739744Z","level":"info","event":"66% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:13:47.231665Z","level":"info","event":"66% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:13:58.919271Z","level":"info","event":"Cleaned and Saved category: Dynamical systems","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:14:23.280553Z","level":"info","event":"67% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:14:34.300037Z","level":"info","event":"Cleaned and Saved category: Category theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:15:05.900402Z","level":"info","event":"68% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:15:07.041314Z","level":"info","event":"68% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:15:54.627799Z","level":"info","event":"69% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:15:59.862273Z","level":"info","event":"Cleaned and Saved category: Algebra","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:16:34.433764Z","level":"info","event":"70% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:16:36.487734Z","level":"info","event":"70% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:17:12.454622Z","level":"info","event":"71% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:17:49.531750Z","level":"info","event":"72% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:17:49.911979Z","level":"info","event":"72% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:18:17.436238Z","level":"info","event":"73% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:19:15.917464Z","level":"info","event":"74% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:19:15.989478Z","level":"info","event":"74% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:19:52.684677Z","level":"info","event":"75% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:20:28.170097Z","level":"info","event":"76% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:20:29.834484Z","level":"info","event":"76% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:21:04.743265Z","level":"info","event":"77% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:21:35.671185Z","level":"info","event":"78% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:21:35.811801Z","level":"info","event":"78% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:22:14.455910Z","level":"info","event":"79% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:22:42.778894Z","level":"info","event":"80% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:22:43.974219Z","level":"info","event":"80% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:23:36.272806Z","level":"info","event":"81% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:24:34.171352Z","level":"info","event":"82% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:24:34.179556Z","level":"info","event":"82% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:25:10.480463Z","level":"info","event":"83% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:25:39.295159Z","level":"info","event":"84% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:25:40.202804Z","level":"info","event":"84% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:26:07.603297Z","level":"info","event":"Cleaned and Saved category: Analysis","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:26:27.932473Z","level":"info","event":"85% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:27:10.637127Z","level":"info","event":"86% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:27:12.118450Z","level":"info","event":"86% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:28:04.017637Z","level":"info","event":"87% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:29:06.479666Z","level":"info","event":"88% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:29:07.616746Z","level":"info","event":"88% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:33:01.851976Z","level":"info","event":"Cleaned and Saved category: Arithmetic","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:33:02.459391Z","level":"info","event":"89% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:33:53.343891Z","level":"info","event":"90% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:33:53.818628Z","level":"info","event":"90% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:34:44.930155Z","level":"info","event":"Cleaned and Saved category: Group theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:34:52.711250Z","level":"info","event":"91% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:35:32.517360Z","level":"info","event":"92% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:35:33.043993Z","level":"info","event":"92% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:35:48.406184Z","level":"info","event":"Cleaned and Saved category: Graph theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:36:04.898389Z","level":"info","event":"93% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:36:50.417498Z","level":"info","event":"Cleaned and Saved category: Complex analysis","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:36:51.971644Z","level":"info","event":"94% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:36:52.494363Z","level":"info","event":"94% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:37:26.777538Z","level":"info","event":"Cleaned and Saved category: Multi-dimensional geometry","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:37:38.247388Z","level":"info","event":"95% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:37:57.413590Z","level":"info","event":"96% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:37:57.456809Z","level":"info","event":"96% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:38:43.891356Z","level":"info","event":"97% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:39:12.697364","level":"warning","event":"The input passed in on this line looks more like a filename than HTML or XML.\n\nIf you meant to use Beautiful Soup to parse the contents of a file on disk, then something has gone wrong. You should open the file first, using code like this:\n\n    filehandle = open(your filename)\n\nYou can then feed the open filehandle into Beautiful Soup instead of using the filename.\n\nHowever, if you want to parse some data that happens to look like a filename, then nothing has gone wrong: you are using Beautiful Soup correctly, and this warning is spurious and can be filtered. To make this warning go away, run this code before calling the BeautifulSoup constructor:\n\n    from bs4 import MarkupResemblesLocatorWarning\n    import warnings\n\n    warnings.filterwarnings(\"ignore\", category=MarkupResemblesLocatorWarning)\n    ","category":"MarkupResemblesLocatorWarning","filename":"/opt/airflow/dags/clean.py","lineno":80,"logger":"py.warnings"}
+{"timestamp":"2025-09-03T07:39:21.659079Z","level":"info","event":"98% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:39:21.990982Z","level":"info","event":"98% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:39:34.218938Z","level":"info","event":"Cleaned and Saved category: Mathematical logic","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:39:40.809488Z","level":"info","event":"Cleaned and Saved category: Model theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:40:04.420169Z","level":"info","event":"99% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:40:57.183839Z","level":"info","event":"Cleaned and Saved category: Number theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:40:57.184195Z","level":"info","event":"Cleaned 99.92% of categories","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:40:57.184363Z","level":"info","event":"Saved cleaned articles at cleaned_data_4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-03T07:40:57.189674","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

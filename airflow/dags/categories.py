@@ -80,7 +80,7 @@ def categories_dag():
                 
                 for subcat in subcats:
                     for sub in subcat:
-                        if sub not in categories:
+                        if sub['category'] not in [cat['category'] for cat in categories]:
                             categories.append(sub)
                         else:
                             pass
