@@ -79,7 +79,11 @@ def categories_dag():
                         pass
                 
                 for subcat in subcats:
-                    categories.extend(subcat)
+                    for sub in subcat:
+                        if sub not in categories:
+                            categories.append(sub)
+                        else:
+                            pass
                 
                 print(f'Layer {layer+1} parsed')
                 layer += 1

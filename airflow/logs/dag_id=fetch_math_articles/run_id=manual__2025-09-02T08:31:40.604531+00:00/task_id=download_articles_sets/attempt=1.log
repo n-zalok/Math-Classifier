@@ -1,0 +1,116 @@
+{"timestamp":"2025-09-02T10:48:00.185433","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-09-02T10:48:00.187000","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/articles.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-09-02T10:50:33.002439Z","level":"info","event":"1% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T10:52:27.453536Z","level":"info","event":"2% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T10:54:34.908945Z","level":"info","event":"3% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T10:56:33.233780Z","level":"info","event":"4% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T10:57:08.233463Z","level":"info","event":"Error downloading pages of category: Stoichiometry","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T10:58:34.124156Z","level":"info","event":"5% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:00:23.798727Z","level":"info","event":"6% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:02:36.674712Z","level":"info","event":"7% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:04:24.364654Z","level":"info","event":"8% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:06:14.375171Z","level":"info","event":"9% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:08:07.460271Z","level":"info","event":"10% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:09:45.159229Z","level":"info","event":"11% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:11:37.650229Z","level":"info","event":"12% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:13:22.731818Z","level":"info","event":"13% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:14:59.801680Z","level":"info","event":"14% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:16:51.426936Z","level":"info","event":"15% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:19:23.582951Z","level":"info","event":"16% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:21:36.609247Z","level":"info","event":"17% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:23:47.608985Z","level":"info","event":"18% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:25:38.393815Z","level":"info","event":"19% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:27:23.539821Z","level":"info","event":"20% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:29:18.792502Z","level":"info","event":"21% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:31:13.994745Z","level":"info","event":"22% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:33:03.495048Z","level":"info","event":"23% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:34:57.724476Z","level":"info","event":"24% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:36:03.514706Z","level":"info","event":"Error downloading pages of category: I/O scheduling","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:36:45.296623Z","level":"info","event":"25% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:38:34.300425Z","level":"info","event":"26% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:40:45.197446Z","level":"info","event":"27% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:42:56.655127Z","level":"info","event":"28% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:45:04.961100Z","level":"info","event":"29% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:47:01.206683Z","level":"info","event":"30% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:48:47.973532Z","level":"info","event":"31% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:50:28.725460Z","level":"info","event":"32% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:52:02.788020Z","level":"info","event":"33% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:53:41.770416Z","level":"info","event":"34% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:55:26.834844Z","level":"info","event":"35% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:57:01.451674Z","level":"info","event":"36% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T11:58:38.156739Z","level":"info","event":"37% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:00:23.374846Z","level":"info","event":"38% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:02:27.774366Z","level":"info","event":"39% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:04:10.495166Z","level":"info","event":"40% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:05:50.601128Z","level":"info","event":"Error downloading pages of category: OS/2 environment variables","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:05:57.703918Z","level":"info","event":"41% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:08:18.766338Z","level":"info","event":"42% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:10:11.858711Z","level":"info","event":"43% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:12:46.779930Z","level":"info","event":"44% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:14:34.765797Z","level":"info","event":"45% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:14:42.540123Z","level":"info","event":"Error downloading pages of category: I/O scheduling","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:16:18.998392Z","level":"info","event":"46% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:18:16.535719Z","level":"info","event":"47% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:20:10.935250Z","level":"info","event":"48% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:22:01.134968Z","level":"info","event":"49% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:24:12.213075Z","level":"info","event":"50% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:26:06.640346Z","level":"info","event":"51% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:27:43.911168Z","level":"info","event":"52% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:27:55.400459Z","level":"info","event":"Error downloading pages of category: ISO/IEC JTC1/SC7 standards","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:29:24.929334Z","level":"info","event":"53% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:31:13.951003Z","level":"info","event":"54% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:33:12.434385Z","level":"info","event":"55% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:35:18.991772Z","level":"info","event":"56% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:37:20.847499Z","level":"info","event":"57% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:39:03.641374Z","level":"info","event":"58% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:40:44.047524Z","level":"info","event":"59% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:42:18.506259Z","level":"info","event":"60% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:43:55.146227Z","level":"info","event":"61% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:45:49.018041Z","level":"info","event":"62% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:47:24.380408Z","level":"info","event":"63% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:49:17.371339Z","level":"info","event":"64% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:51:06.890227Z","level":"info","event":"65% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:52:39.104820Z","level":"info","event":"66% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:53:23.963497Z","level":"info","event":"Error downloading pages of category: I/O scheduling","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:54:12.286529Z","level":"info","event":"67% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:55:10.019744Z","level":"info","event":"Error downloading pages of category: Centaurus A/M83 Group","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:55:15.348571Z","level":"info","event":"Error downloading pages of category: IC 342/Maffei Group","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:55:51.857888Z","level":"info","event":"68% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T12:57:59.511828Z","level":"info","event":"69% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:00:21.880805Z","level":"info","event":"70% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:02:21.699223Z","level":"info","event":"71% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:04:29.523325Z","level":"info","event":"72% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:06:27.493996Z","level":"info","event":"73% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:07:54.439455Z","level":"info","event":"74% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:09:25.066260Z","level":"info","event":"75% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:10:29.828878Z","level":"info","event":"76% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:11:45.913184Z","level":"info","event":"77% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:13:19.556321Z","level":"info","event":"78% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:15:10.232521Z","level":"info","event":"79% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:16:50.552450Z","level":"info","event":"80% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:18:52.846562Z","level":"info","event":"81% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:20:53.152469Z","level":"info","event":"82% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:22:56.363357Z","level":"info","event":"83% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:24:37.674455Z","level":"info","event":"84% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:25:32.452095Z","level":"info","event":"Error downloading pages of category: I/O scheduling","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:26:30.503281Z","level":"info","event":"85% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:30:02.049410Z","level":"info","event":"Error downloading pages of category: Wavelets","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:30:16.293411Z","level":"info","event":"86% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:32:06.041176Z","level":"info","event":"87% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:33:54.276554Z","level":"info","event":"88% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:35:39.033130Z","level":"info","event":"89% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:37:11.749422Z","level":"info","event":"90% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:39:32.679916Z","level":"info","event":"91% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:39:46.957920Z","level":"info","event":"Error downloading pages of category: I/O scheduling","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:41:54.491941Z","level":"info","event":"92% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:43:41.801477Z","level":"info","event":"93% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:45:12.532262Z","level":"info","event":"94% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:46:45.441049Z","level":"info","event":"95% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:48:37.199455Z","level":"info","event":"96% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:49:48.326543Z","level":"info","event":"97% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:51:26.314975Z","level":"info","event":"98% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:53:18.420927Z","level":"info","event":"99% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:53:24.948597Z","level":"info","event":"Error downloading pages of category: Matroid theory","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:54:46.892417Z","level":"info","event":"100% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:54:47.194137Z","level":"info","event":"articles sets downloaded successfully","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:54:47.194325","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

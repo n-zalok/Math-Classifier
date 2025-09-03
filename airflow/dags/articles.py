@@ -48,7 +48,8 @@ def articles_dag():
                 articles_set = soup.find('textarea', {'id': 'ooui-php-2'}).text.strip()
                 cat['articles_set'] = articles_set.replace(' ', '\n')
                 articles_sets.append(cat)
-            except AttributeError:
+            except:
+                print(f'Error collecting pages of category: {cat['category']}')
                 continue
 
         context['ti'].xcom_push(key='articles_sets', value=articles_sets)
@@ -57,13 +58,13 @@ def articles_dag():
 
     @task
     def download_articles_sets(**context):
+        depth = context['params']['depth']
         articles_sets = context['ti'].xcom_pull(key='articles_sets', task_ids='get_articles_sets')
         num_sets = len(articles_sets)
-        counter = 0
 
         percent = 1
         for i, set in enumerate(articles_sets):
-            path = f'./data/{set['og_cat']}/{set['layer']}'
+            path = f'./data_{depth}/{set['og_cat']}/{set['layer']}'
             os.makedirs(path, exist_ok=True)
 
             if (((i+1)/num_sets)*100) >= percent:
@@ -85,6 +86,7 @@ def articles_dag():
                 with open(f"{path}/{set['category']}.xml", "w", encoding="utf-8") as file:
                     file.write(resp.text)
             except:
+                print(f'Error downloading pages of category: {set['category']}')
                 continue
         
         print("articles sets downloaded successfully")

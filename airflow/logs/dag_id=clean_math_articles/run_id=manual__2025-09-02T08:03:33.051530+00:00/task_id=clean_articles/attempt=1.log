@@ -1,0 +1,13 @@
+{"timestamp":"2025-09-02T08:03:33.532643","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-09-02T08:03:33.533309","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/clean.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-09-02T08:03:37.585385Z","level":"info","event":"1% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:03:39.243997Z","level":"info","event":"Error cleaning ./data_2/Trigonometry/2/.xml","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:03:47.038749Z","level":"info","event":"2% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:03:50.479533Z","level":"info","event":"3% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:04:07.156532Z","level":"info","event":"4% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:04:14.965650Z","level":"info","event":"5% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:04:21.067468Z","level":"info","event":"6% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:04:35.771446Z","level":"info","event":"Error cleaning ./data_2/Applied mathematics/2/.xml","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:04:35.771712Z","level":"info","event":"7% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T08:04:45.830391Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2025-09-02T08:04:50.845800Z","level":"error","event":"Task killed!","logger":"task"}
