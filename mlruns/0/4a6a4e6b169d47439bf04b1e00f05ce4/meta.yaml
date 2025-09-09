@@ -1,0 +1,14 @@
+artifact_uri: file:///mnt/ssd/ME/NLP/Math/Math-Explainer/mlruns/0/4a6a4e6b169d47439bf04b1e00f05ce4/artifacts
+end_time: 1757373718122
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4a6a4e6b169d47439bf04b1e00f05ce4
+run_name: t5_explain_runs/exp4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757337916216
+status: 3
+tags: []
+user_id: noor-zalouk
