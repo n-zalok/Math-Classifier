@@ -108,7 +108,7 @@ def clean_dag():
                                 else:
                                     pass
                             
-                            if len(text.split()) < 200:
+                            if len(text.split()) <= 500:
                                 articles.append({
                                     "title": title,
                                     "sub_title": None,

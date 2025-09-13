@@ -1,81 +1,75 @@
-from datasets import load_dataset
-from transformers import T5ForConditionalGeneration, T5TokenizerFast, DataCollatorForSeq2Seq
-from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments
 import os
+import torch
+from datasets import load_dataset
+from transformers import AutoConfig, AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.metrics import classification_report
+from scipy.special import expit as sigmoid
+
 
 os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
 os.environ['TORCH_USE_CUDA_DSA'] = "1"
 
 
-
-ds = load_dataset("noor-zalouk/wiki-math-articles")
+ds = load_dataset("noor-zalouk/wiki-math-articles-multilabel")
 print("Dataset loaded")
 
-model_name = "t5-small"
-tokenizer = T5TokenizerFast.from_pretrained(model_name)
-model = T5ForConditionalGeneration.from_pretrained(model_name)
-base_collator = DataCollatorForSeq2Seq(tokenizer, model=model)
-print("Model, Tokenizer and Collator loaded")
 
-class CustomDataCollator:
-    def __init__(self, tokenizer, model, max_source_length=512, max_target_length=250):
-        self.tokenizer = tokenizer
-        self.model = model
-        self.base_collator = DataCollatorForSeq2Seq(tokenizer, model=model)
-        self.max_source_length = max_source_length
-        self.max_target_length = max_target_length
-
-    def __call__(self, features):
-        new_features = []
-
-        for f in features:
-            title = f["title"]
-            sub_title = f["sub_title"]
-            if not title:
-                title = ""
-            elif not sub_title:
-                sub_title = ""
-            else:
-                pass
-
-            input_text = f"EXPLAIN {sub_title} {title}"
-
-            label_text = f["text"]
-
-            new_features.append({
-                "input_ids": self.tokenizer(input_text, padding="max_length", truncation=True, max_length=self.max_source_length).input_ids,
-                "labels": self.tokenizer(label_text, padding="max_length", truncation=True, max_length=self.max_target_length).input_ids
-            })
-
-        return self.base_collator(new_features)
+df = ds['test'].to_pandas()
+all_labels = list(df['category'].explode().unique())
+mlb = MultiLabelBinarizer()
+mlb.fit([all_labels])
 
 
-custom_collator = CustomDataCollator(tokenizer, model, max_source_length=512, max_target_length=250)
+model_ckpt = "bert-base-uncased"
+tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
+config = AutoConfig.from_pretrained(model_ckpt)
+config.num_labels = len(all_labels)
+config.problem_type = "multi_label_classification"
+model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, config=config)
 
-training_args = Seq2SeqTrainingArguments(
-    output_dir="t5_explain_runs/exp4",
-    remove_unused_columns=False,
-    per_device_train_batch_size=4,          # adjust to your VRAM
-    per_device_eval_batch_size=4,
-    gradient_accumulation_steps=16,          # → effective batch 64
-    num_train_epochs=4,
-    eval_strategy="epoch",
-    save_strategy="epoch",
-    logging_steps=100,
-    label_smoothing_factor=0.1,
-    warmup_ratio=0.1,
-    learning_rate=1e-4,
-    weight_decay=0.01,
-    seed=42,
-)
 
-trainer = Seq2SeqTrainer(
+def prepare(row):
+    text = row['title']
+    if row['sub_title']:
+        text = text + ' ' + row['sub_title']
+    else:
+        pass
+
+    text = text + ' ' + row['text']
+
+    inputs = tokenizer(text, padding="max_length", truncation=True, max_length=512)
+    label_ids = mlb.transform([row['category']])[0]
+
+    inputs['label_ids'] = torch.tensor(label_ids, dtype=torch.float)
+
+    return inputs
+
+ds = ds.map(prepare)
+ds = ds.remove_columns(['text', 'category', 'title', 'sub_title'])
+print("Dataset prepared")
+
+
+def compute_metrics(pred):
+    y_true = pred.label_ids
+    y_pred = sigmoid(pred.predictions)
+    y_pred = (y_pred>0.5).astype(float)
+    clf_report = classification_report(y_true, y_pred, target_names=mlb.classes_, zero_division=0, output_dict=True)
+    return {"micro f1": clf_report["micro avg"]["f1-score"], "macro f1": clf_report["macro avg"]["f1-score"]}
+
+
+training_args = TrainingArguments(
+    output_dir="./BERT_multilabel", num_train_epochs=12, learning_rate=1e-5,
+    per_device_train_batch_size=4, per_device_eval_batch_size=4, gradient_accumulation_steps=16,
+    weight_decay=0.01, warmup_ratio=0.1, eval_strategy="epoch", save_strategy="epoch", logging_steps=100)
+
+
+trainer = Trainer(
     model=model,
     args=training_args,
-    train_dataset=ds['train'],             # your tokenized dataset objects
-    eval_dataset=ds['valid'],
-    data_collator=custom_collator,
-    processing_class=tokenizer
-)
+    compute_metrics=compute_metrics,
+    train_dataset=ds["train"],
+    eval_dataset=ds["valid"],
+    processing_class=tokenizer)
 
 trainer.train()

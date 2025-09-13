@@ -1,0 +1,14 @@
+artifact_uri: file:///mnt/ssd/ME/NLP/Math/Math-Explainer/mlruns/0/ba063fe2b0b74ab6b5278a5b8342fb52/artifacts
+end_time: 1757503859286
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ba063fe2b0b74ab6b5278a5b8342fb52
+run_name: ./BERT_multilabel
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757501803870
+status: 3
+tags: []
+user_id: noor-zalouk
