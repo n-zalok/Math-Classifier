@@ -25,6 +25,8 @@ model_ckpt = "bert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 config = AutoConfig.from_pretrained(model_ckpt)
 config.num_labels = len(all_labels)
+config.id2label = {i: label for i, label in enumerate(all_labels)}
+config.label2id = {label: i for i, label in enumerate(all_labels)}
 config.problem_type = "multi_label_classification"
 model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, config=config)
 

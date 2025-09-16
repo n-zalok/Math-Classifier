@@ -2,3 +2,4 @@
 *.json
 /t5_explain_runs
 /BERT_multilabel
+/DistilBERT_multilabel
