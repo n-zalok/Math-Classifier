@@ -1,0 +1,27 @@
+{"timestamp":"2025-09-02T13:34:08.623857","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-09-02T13:34:08.624408","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/clean.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-09-02T13:34:12.206257Z","level":"info","event":"1% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:34:16.017518Z","level":"info","event":"Cleaned and Saved category: Trigonometry","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:34:20.838579Z","level":"info","event":"2% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:34:23.906540Z","level":"info","event":"3% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:34:39.398726Z","level":"info","event":"4% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:34:46.523586Z","level":"info","event":"5% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:34:52.199615Z","level":"info","event":"6% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:35:05.943319Z","level":"info","event":"7% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:35:19.755421Z","level":"info","event":"Cleaned and Saved category: Applied mathematics","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:35:34.157232Z","level":"info","event":"8% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:35:39.301719Z","level":"info","event":"9% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:35:43.073472Z","level":"info","event":"10% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:35:49.945461Z","level":"info","event":"11% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:35:57.095602Z","level":"info","event":"12% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:06.043434Z","level":"info","event":"Cleaned and Saved category: Combinatorics","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:06.047787Z","level":"info","event":"13% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:06.984398Z","level":"info","event":"Cleaned and Saved category: Probability and statistics","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:08.081840Z","level":"info","event":"14% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:20.492430Z","level":"info","event":"15% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:23.285249Z","level":"info","event":"16% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:28.477251Z","level":"info","event":"17% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:32.719860Z","level":"info","event":"18% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:37.736817Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2025-09-02T13:36:41.604369Z","level":"info","event":"19% completed","chan":"stdout","logger":"task"}
+{"timestamp":"2025-09-02T13:36:42.751238Z","level":"error","event":"Task killed!","logger":"task"}

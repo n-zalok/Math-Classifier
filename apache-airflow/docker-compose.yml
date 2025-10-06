@@ -1,0 +1,20 @@
+services:
+  airflow:
+    image: etl:latest
+
+    networks:
+      - default
+    
+    volumes:
+      - ./airflow:/opt/airflow
+
+    ports:
+      - "8080:8080"
+    
+    command: airflow standalone
+    user: "${UID}:${GID}"
+    
+
+networks:
+  default:
+    driver: bridge

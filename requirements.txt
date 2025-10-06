@@ -1,3 +1,0 @@
-requests==2.32.3
-beautifulsoup4==4.13.4
-mwparserfromhell==0.7.0

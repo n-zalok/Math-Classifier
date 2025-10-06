@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        li {
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Recent Classifications</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Article</th>
+            <th>Input</th>
+            <th>Predictions</th>
+            <th>Created At</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td><pre>{{ row.article[:300] }}{% if row.article|length > 300 %}...{% endif %}</pre></td>
+            <td><pre>{{ row.input[:300] }}{% if row.input|length > 300 %}...{% endif %}</pre></td>
+            <td>
+                <ul>
+                {% for label, score in row.prediction.items() %}
+                    <li>{{ label }}: {{ '%.2f'|format(score) }}</li>
+                {% endfor %}
+                </ul>
+            </td>
+            <td>{{ row.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Classify Another</a>
+</body>
+</html>

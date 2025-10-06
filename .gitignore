@@ -1,5 +1,6 @@
 *.xml
 *.json
-/t5_explain_runs
-/BERT_multilabel
+*.pt
 /DistilBERT_multilabel
+/app/model
+/mlruns

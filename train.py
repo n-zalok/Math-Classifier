@@ -1,56 +1,44 @@
-import os
 import torch
 from datasets import load_dataset
-from transformers import AutoConfig, AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+from transformers import AutoConfig, AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments, Trainer
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.metrics import classification_report
 from scipy.special import expit as sigmoid
-
-
-os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
-os.environ['TORCH_USE_CUDA_DSA'] = "1"
 
 
 ds = load_dataset("noor-zalouk/wiki-math-articles-multilabel")
 print("Dataset loaded")
 
 
-df = ds['test'].to_pandas()
-all_labels = list(df['category'].explode().unique())
+df = ds['train'].to_pandas()
+all_labels = list(df['labels'].explode().unique())
 mlb = MultiLabelBinarizer()
 mlb.fit([all_labels])
 
 
-model_ckpt = "bert-base-uncased"
+model_ckpt = "distilbert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 config = AutoConfig.from_pretrained(model_ckpt)
+
 config.num_labels = len(all_labels)
 config.id2label = {i: label for i, label in enumerate(all_labels)}
 config.label2id = {label: i for i, label in enumerate(all_labels)}
 config.problem_type = "multi_label_classification"
+
 model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, config=config)
+print("Model and tokenizer loaded")
 
 
-def prepare(row):
-    text = row['title']
-    if row['sub_title']:
-        text = text + ' ' + row['sub_title']
-    else:
-        pass
+def prepare(row): 
+    inputs = tokenizer(row['input'], return_tensors="pt", padding="max_length", truncation=True, max_length=512)
+    label_ids = mlb.transform([row['labels']])[0]
 
-    text = text + ' ' + row['text']
-
-    inputs = tokenizer(text, padding="max_length", truncation=True, max_length=512)
-    label_ids = mlb.transform([row['category']])[0]
-
-    inputs['label_ids'] = torch.tensor(label_ids, dtype=torch.float)
-
-    return inputs
+    return {'input_ids': inputs['input_ids'].squeeze(), 'attention_mask': inputs['attention_mask'].squeeze(),
+            'label_ids': torch.tensor(label_ids, dtype=torch.float)}
 
 ds = ds.map(prepare)
-ds = ds.remove_columns(['text', 'category', 'title', 'sub_title'])
+ds = ds.remove_columns(['input', 'labels'])
 print("Dataset prepared")
-
 
 def compute_metrics(pred):
     y_true = pred.label_ids
@@ -61,9 +49,9 @@ def compute_metrics(pred):
 
 
 training_args = TrainingArguments(
-    output_dir="./BERT_multilabel", num_train_epochs=12, learning_rate=1e-5,
-    per_device_train_batch_size=4, per_device_eval_batch_size=4, gradient_accumulation_steps=16,
-    weight_decay=0.01, warmup_ratio=0.1, eval_strategy="epoch", save_strategy="epoch", logging_steps=100)
+    output_dir="./BERT_multilabel", num_train_epochs=9, learning_rate=1e-5, lr_scheduler_type="constant",
+    per_device_train_batch_size=64, per_device_eval_batch_size=64, gradient_accumulation_steps=1,
+    warmup_ratio=0.1, eval_strategy="epoch", save_strategy="epoch", logging_strategy="epoch")
 
 
 trainer = Trainer(
