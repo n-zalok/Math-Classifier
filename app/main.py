@@ -30,7 +30,7 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS classifications (
   id INT AUTO_INCREMENT PRIMARY KEY,
   article TEXT NOT NULL,
-  input TEXT NOT NULL,
+  preprocessed TEXT NOT NULL,
   prediction JSON NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
@@ -69,10 +69,10 @@ def classify(request: Request, text: str = Form(...)):
         # Keep the lowercase version
         tokens.append(token.text.lower())
     
-    input = " ".join(tokens)
+    preprocessed = " ".join(tokens)
 
     # Run prediction
-    predictions = pipe(input, truncation=True, padding=True, max_length=512)
+    predictions = pipe(preprocessed, truncation=True, padding=True, max_length=512)
     preds = {}
 
     for i in predictions[0]:
@@ -81,28 +81,34 @@ def classify(request: Request, text: str = Form(...)):
         else:
             pass
 
+    if preds:
+        output = list(preds.keys())
+    else:
+        output = ["No confident prediction"]
+    
+
     # Save to DB
     cursor.execute(
-        "INSERT INTO classifications (article, input, prediction) VALUES (%s, %s, %s)",
-        (text, input, json.dumps(preds))
+        "INSERT INTO classifications (article, preprocessed, prediction) VALUES (%s, %s, %s)",
+        (text, preprocessed, json.dumps(preds))
     )
     db.commit()
-
+    
     return templates.TemplateResponse(
         "result.html",
-        {"request": request, "article": text, "input": input, "predictions": preds}
+        {"request": request, "article": text, "preprocessed": preprocessed, "output": output}
     )
 
 @app.get("/history", response_class=HTMLResponse)
 def history(request: Request):
-    cursor.execute("SELECT id, article, input, prediction, created_at FROM classifications ORDER BY created_at DESC LIMIT 20")
+    cursor.execute("SELECT id, article, preprocessed, prediction, created_at FROM classifications ORDER BY created_at DESC LIMIT 20")
     rows = cursor.fetchall()
 
     formatted_rows = [
         {
             "id": r[0],
             "article": r[1],
-            "input": r[2],
+            "preprocessed": r[2],
             "prediction": json.loads(r[3]),
             "created_at": r[4]
         }

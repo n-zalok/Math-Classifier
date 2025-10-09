@@ -2,14 +2,100 @@
 <html>
 <head>
     <title>Classification Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            margin: 0;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        .pipeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .stage {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            background: #f9f9f9;
+            font-family: monospace;
+            white-space: pre-wrap;
+            width: 100%;
+            height: 200px;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        a {
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .links {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <h2>Classification Result</h2>
-    <p><b>Article:</b></p>
-    <pre>{{ article }}</pre>
 
-    <p><b>Predicted Labels:</b> {{ predictions }}</p>
+    <div class="pipeline">
+        <div class="stage">
+            <div class="box">
+                <div class="title">Input</div>
+                <div class="content">{{ article[:250] }}{% if article|length > 250 %}...{% endif %}</div>
+            </div>
+        </div>
 
-    <a href="/">Classify another</a> | <a href="/history">View History</a>
+        <div class="stage">
+            <div class="box">
+                <div class="title">Preprocessed Input</div>
+                <div class="content">{{ preprocessed[:250] }}{% if preprocessed|length > 250 %}...{% endif %}</div>
+            </div>
+        </div>
+
+        <div class="stage">
+            <div class="box">
+                <div class="title">Output</div>
+                <div class="content">{{ output }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="links">
+        <a href="/">Classify another</a> | <a href="/history">View History</a>
+    </div>
 </body>
 </html>

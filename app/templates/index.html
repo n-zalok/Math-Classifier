@@ -2,14 +2,155 @@
 <html>
 <head>
     <title>Math Article Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        textarea {
+            width: 500px;
+            height: 200px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .example-container {
+            margin-top: 40px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .example-title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .pipeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .stage {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            background: #f9f9f9;
+            font-family: monospace;
+            white-space: pre-wrap;
+            width: 100%;
+            height: 200px;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        a {
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .links {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <h2>Classify a Math Article</h2>
     <form action="/classify" method="post">
-        <textarea name="text" rows="10" cols="60" placeholder="Paste your article here..."></textarea><br>
+        <textarea name="text" placeholder="Paste your article here..."></textarea><br>
         <button type="submit">Classify</button>
     </form>
-    <br>
-    <a href="/history">View History</a>
+
+    <div class="example-container">
+        <div class="example-title">Example of How It Works</div>
+
+        <div class="pipeline">
+            <div class="stage">
+                <div class="box">
+                    <div class="title">Input</div>
+                    <div class="content">The deterministic rendezvous problem is a variant of the rendezvous problem where the players, or robots, must find each other by following a deterministic sequence of instructions.</div>
+                </div>
+            </div>
+
+            <div class="stage">
+                <div class="box">
+                    <div class="title">Preprocessed Input</div>
+                    <div class="content">deterministic rendezvous problem variant rendezvous problem players robots find following deterministic sequence instructions</div>
+                </div>
+            </div>
+
+            <div class="stage">
+                <div class="box">
+                    <div class="title">Output</div>
+                    <div class="content">[Game theory]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="links">
+        <a href="/history">View History</a>
+    </div>
 </body>
 </html>
