@@ -6,29 +6,35 @@ from sklearn.metrics import classification_report
 from scipy.special import expit as sigmoid
 
 
+# Load the daataset
 ds = load_dataset("noor-zalouk/wiki-math-articles-multilabel")
 print("Dataset loaded")
 
 
+# Get all unique labels and prepare the MultiLabelBinarizer
 df = ds['train'].to_pandas()
 all_labels = list(df['labels'].explode().unique())
 mlb = MultiLabelBinarizer()
 mlb.fit([all_labels])
 
 
+# Load the tokenizer and config
 model_ckpt = "distilbert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 config = AutoConfig.from_pretrained(model_ckpt)
 
+# Update the config for multi-label classification
 config.num_labels = len(all_labels)
 config.id2label = {i: label for i, label in enumerate(all_labels)}
 config.label2id = {label: i for i, label in enumerate(all_labels)}
 config.problem_type = "multi_label_classification"
 
+# Load the model
 model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, config=config)
 print("Model and tokenizer loaded")
 
 
+# Prepare the dataset
 def prepare(row): 
     inputs = tokenizer(row['input'], return_tensors="pt", padding="max_length", truncation=True, max_length=512)
     label_ids = mlb.transform([row['labels']])[0]
@@ -40,6 +46,8 @@ ds = ds.map(prepare)
 ds = ds.remove_columns(['input', 'labels'])
 print("Dataset prepared")
 
+
+# Define the compute_metrics function for micro and macro F1 scores
 def compute_metrics(pred):
     y_true = pred.label_ids
     y_pred = sigmoid(pred.predictions)
@@ -48,11 +56,11 @@ def compute_metrics(pred):
     return {"micro f1": clf_report["micro avg"]["f1-score"], "macro f1": clf_report["macro avg"]["f1-score"]}
 
 
+# Define the training arguments and trainer
 training_args = TrainingArguments(
-    output_dir="./BERT_multilabel", num_train_epochs=9, learning_rate=1e-5, lr_scheduler_type="constant",
+    output_dir="./DistilBERT_multilabel", num_train_epochs=9, learning_rate=1e-5, lr_scheduler_type="constant",
     per_device_train_batch_size=64, per_device_eval_batch_size=64, gradient_accumulation_steps=1,
     warmup_ratio=0.1, eval_strategy="epoch", save_strategy="epoch", logging_strategy="epoch")
-
 
 trainer = Trainer(
     model=model,
@@ -62,4 +70,6 @@ trainer = Trainer(
     eval_dataset=ds["valid"],
     processing_class=tokenizer)
 
+
+# Start training
 trainer.train()

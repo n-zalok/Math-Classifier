@@ -1,0 +1,14 @@
+artifact_uri: file:///content/drive/MyDrive/mlruns/0/c8e001ac883e4ae9909168ea5ce2172f/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c8e001ac883e4ae9909168ea5ce2172f
+run_name: capable-auk-759
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760036796538
+status: 1
+tags: []
+user_id: unknown

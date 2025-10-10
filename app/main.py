@@ -8,7 +8,7 @@ import json
 import spacy
 
 
-# --- Load model ---
+# Load the model
 model_ckpt = "./model"
 
 config = AutoConfig.from_pretrained(model_ckpt)
@@ -16,7 +16,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 model = AutoModelForSequenceClassification.from_pretrained(model_ckpt, config=config)
 pipe = TextClassificationPipeline(model=model, tokenizer=tokenizer, return_all_scores=True, device=-1)
 
-# --- DB setup ---
+# DB setup
 db = mysql.connector.connect(
     host="db",
     user="mluser",
@@ -37,20 +37,20 @@ CREATE TABLE IF NOT EXISTS classifications (
 """)
 db.commit()
 
-# --- FastAPI app ---
+# FastAPI app
 app = FastAPI(title="Math Articles Classifier")
-
-# --- Templates ---
+# Templates
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
-
-# --- Spacy setup ---
+# Spacy setup
 nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
 
 @app.get("/", response_class=HTMLResponse)
+# Home route
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+# Classification route
 @app.post("/classify", response_class=HTMLResponse)
 def classify(request: Request, text: str = Form(...)):
     # Text preprocessing
@@ -80,10 +80,12 @@ def classify(request: Request, text: str = Form(...)):
             preds[i["label"]] = i["score"]
         else:
             pass
-
+    
+    # Prepare output
     if preds:
         output = list(preds.keys())
     else:
+        # Return "No confident prediction" if no label was assigned with >50% confidence
         output = ["No confident prediction"]
     
 
@@ -99,11 +101,14 @@ def classify(request: Request, text: str = Form(...)):
         {"request": request, "article": text, "preprocessed": preprocessed, "output": output}
     )
 
+# History route
 @app.get("/history", response_class=HTMLResponse)
 def history(request: Request):
+    # Fetch last 20 classifications
     cursor.execute("SELECT id, article, preprocessed, prediction, created_at FROM classifications ORDER BY created_at DESC LIMIT 20")
     rows = cursor.fetchall()
 
+    # Format rows for display
     formatted_rows = [
         {
             "id": r[0],

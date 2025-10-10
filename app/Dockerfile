@@ -1,5 +1,4 @@
-FROM mytorch:latest
-
+FROM python:3.11-slim
 USER root
 
 RUN apt-get update && apt-get install -y \
@@ -11,8 +10,9 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN pip install --upgrade pip
+RUN pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
 RUN pip install -r requirements.txt
-RUN  python -m spacy download en_core_web_sm
+RUN python -m spacy download en_core_web_sm
 
 COPY . .
 

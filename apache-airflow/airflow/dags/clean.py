@@ -9,7 +9,8 @@ import json
 from tqdm import tqdm
 import math
 
-    
+
+# Depth parameter controls which XML containing directory to clean
 @dag(
     dag_id='clean_math_articles',
     params={'depth': Param(2, type='integer')},
@@ -20,11 +21,14 @@ import math
 def clean_dag():
 
     @task
+    # Clean downloaded XML articles to normal text as possible and save as JSON files
     def clean_articles(**context):
         depth = context['params']['depth']
+        # Sections to be removed entirely
         attachments = ["See also", "Notes", "References", "External links", "Further reading",
                        "Sources", "Citations", "Categories", "Bibliography"]
 
+        # Get number of categories to track progress
         with open(f'categories_depth_{depth}.pkl', 'rb') as file:
             categories = pickle.load(file)
         num_cats = len(categories)
@@ -38,8 +42,8 @@ def clean_dag():
             articles = []
             for layer in os.scandir(category):
                 for file in os.scandir(layer):
+                    # Progress tracking
                     total += 1
-
                     if (((total)/num_cats)*100) >= percent:
                         tqdm.write(f"{percent}% completed")
                         percent  = math.ceil(((total)/num_cats)*100)
@@ -48,18 +52,19 @@ def clean_dag():
 
 
                     try:
+                        # Parse XML file
                         tree = ET.parse(file)
                         root = tree.getroot()
+                        ns = {"ns": "http://www.mediawiki.org/xml/export-0.11/"}
 
-                        ns = {"ns": "http://www.mediawiki.org/xml/export-0.11/"}  # XML namespace
-
-                        for page in root.findall("ns:page", ns):
+                        for page in root.findall("ns:page", ns): # Iterate through each page
                             title = page.find("ns:title", ns).text
-                            if title.startswith("Category:"):
+                            if title.startswith("Category:"): # Skip wiki page about wiki category itself
                                 continue
                             else:
                                 pass
-
+                            
+                            # Extract text content
                             text_elem = page.find("ns:revision/ns:text", ns)
                             if text_elem is None or text_elem.text is None:
                                 continue
@@ -69,11 +74,13 @@ def clean_dag():
                             wiki_markup = text_elem.text
                             wikicode = mwparserfromhell.parse(wiki_markup)
 
+                            # Split content into sections based on headings
                             sections = {}
                             current_section = "Introduction"
                             sections[current_section] = []
 
                             for node in wikicode.nodes:
+                                # Check if node is a heading and if so, start a new section
                                 if node.__class__.__name__ == "Heading":
                                     current_section = str(node.title).strip()
 
@@ -81,9 +88,10 @@ def clean_dag():
                                     current_section = soup.get_text(" ", strip=True)
 
                                     sections[current_section] = []
+                                # If it's not a heading, add content to the current section
                                 else:
-                                    # Skip images/thumbnails entirely
                                     node_str = str(node)
+                                    # Skip images/thumbnails entirely
                                     if node_str.startswith("[[File:") or node_str.startswith("[[Image:"):
                                         continue
                                     else:
@@ -100,6 +108,7 @@ def clean_dag():
                                 else:
                                     pass
                             
+                            # Join cleaned sections into text chunks
                             text = ''
                             for section in clean_sections.values():
                                 if section:
@@ -108,6 +117,7 @@ def clean_dag():
                                 else:
                                     pass
                             
+                            # Save article if it has less than 350 words
                             if len(text.split()) <= 350:
                                 articles.append({
                                     "title": title,
@@ -116,6 +126,8 @@ def clean_dag():
                                     "category": category.name,
                                     "layer": layer.name
                                 })
+                                
+                            # else split into sections
                             else:
                                 for sub_title, txt in clean_sections.items():
                                     if txt:
